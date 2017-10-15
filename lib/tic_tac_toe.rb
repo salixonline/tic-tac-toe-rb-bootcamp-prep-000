@@ -91,3 +91,16 @@ def winner(board)
     board[win_combination[0]]
   end
 end
+
+def play(board)
+  move = 0
+  while move < 9
+    turn(board)
+    move += 1
+    if won?(board)
+      puts "Congartulatioms #{current_player(board)}!"
+    elsif draw?(board)
+      puts "It was a draw!"
+    end
+  end
+end
