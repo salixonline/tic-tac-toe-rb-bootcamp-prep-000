@@ -93,10 +93,8 @@ def winner(board)
 end
 
 def play(board)
-  move = 0
-  while move < 9
+  while !over?
     turn(board)
-    move += 1
     if won?(board)
       return puts "Congartulatioms #{current_player(board)}!"
     elsif draw?(board)
