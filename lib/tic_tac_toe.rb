@@ -64,11 +64,10 @@ def won?(board)
     win_index1 = win_combination[0]
     win_index2 = win_combination[1]
     win_index3 = win_combination[2]
-    position_1 = board[win_index1]
-    position_2 = board[win_index2]
-    position_3 = board[win_index3]
-    if (position_1 == "X" && position_2 == "X" && position_3 == "X") ||
-      (position_1 == "O" && position_2 == "O" && position_3 == "O")
+    pos_1 = board[win_index1]
+    pos_2 = board[win_index2]
+    pos_3 = board[win_index3]
+    if pos_1 == pos_2 && pos_2 == pos_3 && position_taken(board[win_index1])
       return win_combination
     end
   end
