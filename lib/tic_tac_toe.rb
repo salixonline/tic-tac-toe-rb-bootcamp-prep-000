@@ -93,10 +93,10 @@ def winner(board)
 end
 
 def play(board)
-  until over?
+  until over?(board)
     turn(board)
   end
-  
+
   if won?(board)
     return puts "Congartulatioms #{current_player(board)}!"
   elsif draw?(board)
