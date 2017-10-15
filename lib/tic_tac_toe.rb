@@ -98,7 +98,7 @@ def play(board)
   end
 
   if won?(board)
-    return puts "Congartulatioms #{current_player(board)}!"
+    return puts "Congartulations #{current_player(board)}!"
   elsif draw?(board)
     return puts "It was a draw!"
   end
