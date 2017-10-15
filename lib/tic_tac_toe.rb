@@ -98,9 +98,9 @@ def play(board)
     turn(board)
     move += 1
     if won?(board)
-      puts "Congartulatioms #{current_player(board)}!"
+      return puts "Congartulatioms #{current_player(board)}!"
     elsif draw?(board)
-      puts "It was a draw!"
+      return puts "It was a draw!"
     end
   end
 end
