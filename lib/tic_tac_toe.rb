@@ -95,10 +95,11 @@ end
 def play(board)
   until over?
     turn(board)
-    if won?(board)
-      return puts "Congartulatioms #{current_player(board)}!"
-    elsif draw?(board)
-      return puts "It was a draw!"
-    end
+  end
+  
+  if won?(board)
+    return puts "Congartulatioms #{current_player(board)}!"
+  elsif draw?(board)
+    return puts "It was a draw!"
   end
 end
